@@ -6,6 +6,7 @@
 
 struct OptionsList {  // The list of options to get from arguments
   char* file_name;
+  char* path_to_open = "E:\\My space\\ITMO\\OP\\lab3\\labwork3-NOBLEMAN888\\files\\";
   char* path_to_save;
   int64_t max_num_of_iters = -1;
   int64_t freq_of_saving = 0;
@@ -22,13 +23,9 @@ void LogErrorInvalidArg();  // If argument is invalid, logs the error and exits 
 
 void LogErrorInvalidArgNum(); // If 2-part argument doesn't have second part ,logs the error and exits program
 
-void LogErrorFileNotFound();  // If there is no file with such file_name, logs the error and exits program
-
-void LogErrorFileNotOpened(); // If argument is invalid, logs the error and exits program
-
 size_t CompareStrings(const char* s1, const char* s2, size_t count);  // Compares 2 strings. Return 0, if they are equal
 
-static size_t GetStringLen(const char* str);  // Returns the numbers of chars in string
+size_t GetStringLen(const char* str);  // Returns the numbers of chars in string
 
 char* GetStringArgumentValue(char* s);  // Extracts and returns the string value from 2-part argument
 

@@ -2,6 +2,12 @@
 
 #define LAB3_LABWORK3_NOBLEMAN888_LABWORK3_NOBLEMAN888_MODULES_SANDPILE_PROCESSING_SANDPILE_PROCESSING_H_
 
-void SandPile();
+#include "file_reading/file_reading.h"
+#include "arguments_parsing/arguments_parsing.h"
+#include "picture_processing/picture_processing.h"
+
+#include <iostream>
+
+void PerformSandPile(SandPileParameters sp, OptionsList options);
 
 #endif //LAB3_LABWORK3_NOBLEMAN888_LABWORK3_NOBLEMAN888_MODULES_SANDPILE_PROCESSING_SANDPILE_PROCESSING_H_
