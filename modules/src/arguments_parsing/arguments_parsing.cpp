@@ -1,7 +1,5 @@
 #include "arguments_parsing.h"
 
-#include <algorithm>
-#include <iostream>
 
 void LogErrorInvalidArg() {
   std::cerr << "Wrong argument!";
@@ -60,7 +58,7 @@ OptionsList ParseArguments(int argc, char* argv[]) {
           if (i < argc - 1) {
             switch (arguments[j].kArgumentType) {
               case 0:
-                options.file_name = argv[++i];
+                options.path_to_open = argv[++i];
                 break;
               case 1:
                 options.path_to_save = argv[++i];
@@ -80,7 +78,7 @@ OptionsList ParseArguments(int argc, char* argv[]) {
         } else {
           switch (arguments[j].kArgumentType) {
             case 0:
-              options.file_name = GetStringArgumentValue(argv[i]);
+              options.path_to_open = GetStringArgumentValue(argv[i]);
               break;
             case 1:
               options.path_to_save = GetStringArgumentValue(argv[i]);

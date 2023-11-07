@@ -3,10 +3,12 @@
 #define LAB3_LABWORK3_NOBLEMAN888_LABWORK3_NOBLEMAN888_MODULES_ARGUMENTS_PARSING_ARGUMENTS_PARSING_H_
 
 #include <cstdint>
+#include <algorithm>
+#include <iostream>
 
 struct OptionsList {  // The list of options to get from arguments
-  char* file_name;
-  char* path_to_open = "E:\\My space\\ITMO\\OP\\lab3\\labwork3-NOBLEMAN888\\files\\";
+//  char* file_name;
+  char* path_to_open;
   char* path_to_save;
   int64_t max_num_of_iters = -1;
   int64_t freq_of_saving = 0;

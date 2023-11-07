@@ -1,7 +1,6 @@
-#include <arguments_parsing/arguments_parsing.h>
-#include <file_reading/file_reading.h>
-
-#include <sandpile_processing/sandpile_processing.h>
+#include "../modules/src/arguments_parsing/arguments_parsing.cpp"
+#include "../modules/src/file_reading/file_reading.cpp"
+#include "../modules/src/sandpile_processing/sandpile_processing.cpp"
 
 #include <iostream>
 

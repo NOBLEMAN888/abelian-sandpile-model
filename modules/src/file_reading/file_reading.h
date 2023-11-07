@@ -2,12 +2,15 @@
 
 #define LAB3_LABWORK3_NOBLEMAN888_LABWORK3_NOBLEMAN888_MODULES_FILE_READING_FILE_READING_H_
 
-#include "arguments_parsing/arguments_parsing.h"
+#include "../arguments_parsing/arguments_parsing.h"
+
+#include <fstream>
+#include <iostream>
 
 struct Node {
-  int16_t x;
-  int16_t y;
-  uint64_t num;
+  int16_t x = 1;
+  int16_t y = 1;
+  uint64_t num = 0;
   Node* next;
   Node(int16_t a, int16_t b, uint64_t c){
     x = a;
@@ -65,6 +68,10 @@ struct CoordsList {
 struct SandPileParameters {
   int16_t size_x = 1;
   int16_t size_y = 1;
+  int16_t from_x = 0;
+  int16_t to_x = 2;
+  int16_t from_y = 0;
+  int16_t to_y = 2;
   uint64_t** matrix;
 };
 
@@ -72,7 +79,7 @@ void LogErrorFileNotOpened(); // If argument is invalid, logs the error and exit
 
 bool IsDigit(char chr);
 
-int GetDigitFromChar(char chr);
+int16_t GetDigitFromChar(char chr);
 
 SandPileParameters GetMatrixFromFile(OptionsList options);
 
