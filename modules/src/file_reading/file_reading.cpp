@@ -32,12 +32,14 @@ SandPileParameters GetMatrixFromFile(OptionsList options) {
       cnt = 0;
       if (x > max_x) {
         max_x = x;
-      } if (x < min_x || min_x == -1) {
+      }
+      if (x < min_x || min_x == -1) {
         min_x = x;
       }
       if (y > max_y) {
         max_y = y;
-      } if (y < min_y || min_y == -1) {
+      }
+      if (y < min_y || min_y == -1) {
         min_y = y;
       }
       list.PushBack(x, y, num);
@@ -74,7 +76,7 @@ SandPileParameters GetMatrixFromFile(OptionsList options) {
   }
 
   while (!list.IsEmpty()) {
-    sp.matrix[list.head->y - min_y][list.head->x -  min_x] += list.head->num;
+    sp.matrix[list.head->y][list.head->x] += list.head->num;
     list.Shift();
   }
   sp.from_x = min_x;

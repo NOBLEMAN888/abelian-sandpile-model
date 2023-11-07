@@ -27,13 +27,6 @@ void ClearMatrix(SandPileParameters& sp) {
 }
 
 void PerformSandPile(SandPileParameters& sp, OptionsList& options) {
-  for (int16_t i = 0; i < sp.size_y; ++i) {
-    for (int16_t j = 0; j < sp.size_x; ++j) {
-      std::cout << sp.matrix[i][j] << ' ';
-    }
-    std::cout << '\n';
-  }
-  std::cout << '\n';
   CoordsList unstable_coords;
   bool need_to_add;
   int iters = 0;
@@ -64,13 +57,6 @@ void PerformSandPile(SandPileParameters& sp, OptionsList& options) {
       sp.size_y *= 2;
       sp.size_x *= 2;
       sp.matrix = DoubleMatrix(sp, offset_x, offset_y);
-      for (int16_t i = 0; i < sp.size_y; ++i) {
-        for (int16_t j = 0; j < sp.size_x; ++j) {
-          std::cout << sp.matrix[i][j] << ' ';
-        }
-        std::cout << '\n';
-      }
-      std::cout << '\n';
       sp.from_y += offset_y;
       sp.to_y += offset_y;
       sp.from_x += offset_x;
